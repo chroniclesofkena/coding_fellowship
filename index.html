@@ -1,5 +1,63 @@
+<script>
+    var i=0;
+function expand(){
+  if(i==0){
+document.getElementById("menu").style.transform="scale(3)"; 
+   document.getElementById("circle").style.transform="rotate(45deg)"; 
+    i=1;
+  }
+  else{   document.getElementById("menu").style.transform="scale(0)"; 
+   document.getElementById("circle").style.transform="rotate(0deg)"; 
+    i=0;
+  }
+}
+</script>
+<html>
+    <head>
+        <title> </title>
+        
+        <link href="Final_Project/homepage.css" rel="stylesheet">
+        <link rel="stylesheet" href="/path/to/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/3c0cc4bf4b.js" crossorigin="anonymous"></script> 
 
-<h1>Let's go to a park Malia.</h1>
-<p> My Second Commit.</p>
-<p style= "background-color: blue;":>My Second Commit.</p>
+     <body>
+      
+    </head>
+    
+        <div class="circle" id="circle"></div>
+             <span></span>
+             <span></span>
+             <span></span>
+             <span></span>
+        </div>
 
+        <div class="menu" id="menu">
+            <a href="#">
+                <i class="fas fa-home"></i>  
+            </a>
+            <a href="#">
+                <i class="fas fa-blog"></i> 
+            </a>
+            <a href="#">
+                <i class="fas fa-drafting-compass"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="#">
+                <i class="fas fa-globe"></i>
+            </a>      
+            <a href="#">
+                <i class="fas fa-headphones"></i>
+            </a>   
+        </div>
+
+        <div class="toggle" id="circle" onclick="expand()">
+        <!--    <i class="fa fa-plus" id="plus"></i> -->
+          </div>
+      
+
+    </body>
+    
+        
+</html>
