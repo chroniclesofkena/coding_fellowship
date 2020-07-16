@@ -1,4 +1,4 @@
-<script>
+ <script>
     var i=0;
 function expand(){
   if(i==0){
@@ -10,8 +10,15 @@ document.getElementById("menu").style.transform="scale(3)";
    document.getElementById("circle").style.transform="rotate(0deg)"; 
     i=0;
   }
-}
-</script>
+} 
+
+ 
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+} 
+
+ </script> 
 <html>
     <head>
         <title> </title>
@@ -21,10 +28,11 @@ document.getElementById("menu").style.transform="scale(3)";
         <script src="https://kit.fontawesome.com/3c0cc4bf4b.js" crossorigin="anonymous"></script> 
 
      <body>
+     <input type="checkbox" name="" onclick="myFunction()">
       
     </head>
     
-        <div class="circle" id="circle"></div>
+        <div class="circle" id="circle">
              <span></span>
              <span></span>
              <span></span>
@@ -32,24 +40,15 @@ document.getElementById("menu").style.transform="scale(3)";
         </div>
 
         <div class="menu" id="menu">
-            <a href="#">
-                <i class="fas fa-home"></i>  
+            <a href="Final_Project/blogPage.html">
+                <i class="fas fa-user"></i>  
             </a>
-            <a href="#">
-                <i class="fas fa-blog"></i> 
-            </a>
-            <a href="#">
+            <a href="Final_Project/projectPage.html">
                 <i class="fas fa-drafting-compass"></i>
             </a>
-            <a href="#">
-                <i class="fas fa-user"></i>
-            </a>
-            <a href="#">
-                <i class="fas fa-globe"></i>
-            </a>      
-            <a href="#">
+            <a href="Final_Project/mediationPage.html">
                 <i class="fas fa-headphones"></i>
-            </a>   
+            </a>      
         </div>
 
         <div class="toggle" id="circle" onclick="expand()">
