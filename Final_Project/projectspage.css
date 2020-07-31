@@ -1,0 +1,127 @@
+:root{
+    --red: rgb(9, 83, 255);
+    --white: #383232;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    background-color: var(--white);
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  [draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+  }
+      
+      header{
+        width: 100vw;
+        height: 40px;
+        position: fixed;
+        top: 0;
+        background-color: var(--white);
+        border-bottom: 1px solid var(--red);
+        z-index: 1;
+      }
+      
+      nav{
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+        color:white;
+      }
+      #nav {
+        color: white;
+
+      }
+
+      #welcome-section{
+        background-color: var(--red);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+      }
+      
+      #welcome-section h1{
+        font: 60px 'Noto Sans', Sans-serif;
+      }
+      
+      #welcome-section a {
+        font-size: 60px;
+        color: white;
+        cursor: move;
+        z-index: 10;
+        position: absolute;
+      }
+/*
+      #trash_icon{
+        font-size: 60px;
+        color: white;
+        cursor: move;
+        z-index: 10;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+      }
+    */
+      #welcome-section a:nth-child(1){
+        font-size: 60px;
+        color: white;
+        cursor: move;
+        z-index: 10;
+        position: absolute;
+        top: 300px;
+        left: 500px;
+      }
+      
+      #welcome-section a:nth-child(2){
+        font-size: 60px;
+        color: white;
+        cursor: move;
+        z-index: 10;
+        position: absolute;
+        top: 300px;
+        left: 250px;
+      }
+      #welcome-section a:nth-child(3){
+        font-size: 60px;
+        color: white;
+        cursor: move;
+        z-index: 10;
+        top: 300px;
+        left: 750px;
+      }
+      #welcome-section a:nth-child(3){
+        font-size: 60px;
+        color: white;
+        cursor: move;
+        z-index: 10;
+        top: 300px;
+        left: 100px;
+      }
+
+
+
+    

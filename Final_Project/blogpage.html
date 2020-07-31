@@ -1,3 +1,26 @@
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("column");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+<html>
+
+
 <link href="blogPage.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@300&display=swap">
@@ -17,16 +40,26 @@
     <main>
 
         <section id="welcome-section">
-            <h1>Hello, I'm Kena</h1>
+            <h1>Hello, I'm Kena.</h1>
             <div>Emerging IT Professional   |   Front End Web Developer |   Artist</div>
         </section>
 
         <section id="tech-section">
-            <h2>TECH</h2>
+                  <img class="column" src="itf.png" alt="ITF" style="width:100%">
+
+                  <img class="column" src="a+.webp" alt="A+" style="width:100%">
+
+                  <img class="column" src="colabl.png" alt="CoLabl" style="width:100%">
+
+                  <img class="column" src="cisco.png" alt="Cisco" style="width:100%">
+                  
+              <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
         </section>
+    
 
         <section id="art-section">
-            <h2>ARTTTT</h2>
+            <h2>ART</h2>
         </section>
 
         <footer id="contact">
@@ -40,4 +73,4 @@
             </div>
         </footer>
         <div id="footer">Copyright<sup>&copy;</sup> 2020</div>
-    
+        </html>
