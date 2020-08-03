@@ -49,12 +49,13 @@ a{
         overflow: hidden;
         color:white;
       }
+
       #nav {
         color: white;
 
       }
 
-      #welcome-section{
+       #cd-section{
         background-color: var(--red);
         height: 100vh;
         display: flex;
@@ -63,63 +64,86 @@ a{
         justify-content: center;
         color: var(--white);
       }
-      
-      #welcome-section h1{
-        font: 60px 'Noto Sans', Sans-serif;
-      }
-      
-      #welcome-section a {
-        font-size: 60px;
-        color: white;
-        cursor: move;
-        z-index: 10;
-        position: absolute;
-      }
-/*
+   
+
       #trash_icon{
-        font-size: 60px;
-        color: white;
+        max-width: 13%;
+        max-height: 13%;
         cursor: move;
         z-index: 10;
+        top: 550px;
+        left: 1250px;
         position: absolute;
-        top: 200px;
-        left: 100px;
-      }
-    */
-      #welcome-section a:nth-child(1){
-        font-size: 60px;
-        color: white;
-        cursor: move;
-        z-index: 10;
-        position: absolute;
-        top: 300px;
-        left: 500px;
       }
       
-      #welcome-section a:nth-child(2){
-        font-size: 60px;
-        color: white;
+      #cd_icon1{
+        max-width: 15%;
+        max-height: 15%;
         cursor: move;
         z-index: 10;
+        top: 525px;
+        left: 350px;
         position: absolute;
-        top: 300px;
-        left: 250px;
       }
-      #welcome-section a:nth-child(3){
-        font-size: 60px;
-        color: white;
+
+      #cd_icon2{
+        max-width: 15%;
+        max-height: 15%;
+        cursor: move;
+        z-index: 10;
+        top: 525px;
+        left: 200px;
+        position: absolute;
+      }
+
+      #cd_icon3{
+        max-width: 15%;
+        max-height: 15%;
+        cursor: move;
+        z-index: 10;
+        top: 525px;
+        left: 50px;
+        position: absolute;
+      }
+
+      #bf_icon{
+        max-width: 15%;
+        max-height: 15%;
         cursor: move;
         z-index: 10;
         top: 300px;
-        left: 750px;
+        left: 1250px;
+        position: absolute;
       }
-      #welcome-section a:nth-child(3){
-        font-size: 60px;
-        color: white;
+
+      #rf_icon{
+        max-width: 15%;
+        max-height: 15%;
         cursor: move;
         z-index: 10;
-        top: 300px;
-        left: 100px;
+        top: 150px;
+        left: 1250px;
+        position: absolute;
+      }
+
+      #pf_icon{
+        max-width: 15%;
+        max-height: 15%;
+        cursor: move;
+        z-index: 10;
+        top: 50px;
+        left: 1250px;
+        position: absolute;
+      }
+
+      #resume_icon{
+        max-width: 15%;
+        max-height: 15%;
+        cursor: move;
+        z-index: 10;
+        top: 250px;
+        left: 650px;
+        position: absolute;
       }
 
 

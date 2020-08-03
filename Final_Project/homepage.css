@@ -98,7 +98,14 @@ input[type="checkbox"]:checked ~ *
     filter: blur(55px);
 }
 
-
+#logo {
+    max-width: 10%;
+    max-height: 10%;
+    position: fixed;
+    top: 10px;
+    left: 100px;
+    z-index: 2; 
+}
 
 .toggle {
     background-color: rgb(255, 255, 255);

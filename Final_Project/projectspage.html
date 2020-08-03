@@ -11,42 +11,50 @@
     <header>
         <nav class="navbar" id="navbar">
       
-            <a href="Coding_Fellowship/index.html">
+            <a href="../index.html">
                 <i class="fas fa-home"></i>
             </a>      
-            <a href="Final_Project/blogPage.html">
+            <a href="blogPage.html" target="new">
                 <i class="fas fa-user"></i>  
             </a>
-            <a href="Final_Project/mediationPage.html">
+            <a href="mediationPage.html" target="new">
                 <i class="fas fa-headphones"></i>
             </a>    
         </nav>    
-      
     </header>
     
     <main>
 
-        <section id="welcome-section">
-                <a draggable ="true" id="trash_icon">
-                    <i class="far fa-trash-alt"></i> 
-                </a>
-                <a draggable ="true" id="folder_icon">
-                    <i class="far fa-folder"></i>
-                </a>
-                <a draggable ="true" id="resume_icon">
-                    <i class="far fa-file-pdf"></i>
-                </a>  
-                <a draggable ="true" id="music_icon">
-                    <i class="fas fa-music"></i>
-                </a>     
+        <section id="cd-section">
+              <img draggable ="true" src="trash.png"  id="trash_icon">
+
+          <a href="https://fanlink.to/VEXED" target="new">
+              <img draggable ="true" src="cd.png" id="cd_icon1">
+          </a>
+          <a href="https://fanlink.to/ROUNDS" target="new">
+              <img draggable ="true" src="cd.png" id="cd_icon2">
+          </a>
+          <a href="https://fanlink.to/ANNIE" target="new">
+              <img draggable ="true" src="cd.png" id="cd_icon3">
+          </a>
+          <a href="https://codepen.io/chroniclesofkena/full/mdVWxOQ" target="new">
+              <img draggable ="true" src="blue_folder.png" id="bf_icon">
+          </a>
+          <a href="https://codepen.io/chroniclesofkena/details/abdWzbG" target="new">
+              <img draggable ="true" src="regular_folder.png" id="rf_icon">
+          </a>
+              <img draggable ="true" src="purple_folder.png" id="pf_icon">
+          <a href="https://dochub.com/kenabeyene85/0YkWQ4BwYB7YDmeRpl7A8q/kenas-resume-pdf?dt=L9E1UCP1pANRUy-gK_4v" target="new">
+                <img draggable ="true" src="pdf.png" id="resume_icon">
+           </a>   
         </section>
 
     </main>
 
     <script>
+
       dragElement(document.getElementById("trash_icon"));
-        var trash=(document.getElementById("trash_icon"));
-        console.log({trash});
+       
       function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
         if (document.getElementById(elmnt.id )) {
@@ -90,9 +98,8 @@
 
       //-------------------------------------------------------------------------
 
-      dragElement(document.getElementById("folder_icon"));
-        var trash=(document.getElementById("folder_icon"));
-        console.log({trash});
+      dragElement(document.getElementById("cd_icon1"));
+    
       function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
         if (document.getElementById(elmnt.id )) {
@@ -134,9 +141,8 @@
         }
       }
 //---------------------------------------------------------------------------
-      dragElement(document.getElementById("resume_icon"));
-        var trash=(document.getElementById("resume_icon"));
-        console.log({trash});
+      dragElement(document.getElementById("cd_icon2"));
+
       function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
         if (document.getElementById(elmnt.id )) {
@@ -178,9 +184,8 @@
         }
       }
 //-----------------------------------------------------------------------
-      dragElement(document.getElementById("music_icon"));
-        var trash=(document.getElementById("music_icon"));
-        console.log({trash});
+      dragElement(document.getElementById("cd_icon3"));
+       
       function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
         if (document.getElementById(elmnt.id )) {
@@ -221,6 +226,181 @@
           document.onmousemove = null;
         }
       }
+
+      //-----------------------------------------------------------------------
+      dragElement(document.getElementById("bf_icon"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        if (document.getElementById(elmnt.id )) {
+          // if present, the header is where you move the DIV from:
+          document.getElementById(elmnt.id ).onmousedown = dragMouseDown;
+        } else {
+          // otherwise, move the DIV from anywhere inside the DIV:
+          elmnt.onmousedown = dragMouseDown;
+        }
+      
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+      
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+          elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+      
+        function closeDragElement() {
+          // stop moving when mouse button is released:
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+
+       //-----------------------------------------------------------------------
+       dragElement(document.getElementById("rf_icon"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        if (document.getElementById(elmnt.id )) {
+          // if present, the header is where you move the DIV from:
+          document.getElementById(elmnt.id ).onmousedown = dragMouseDown;
+        } else {
+          // otherwise, move the DIV from anywhere inside the DIV:
+          elmnt.onmousedown = dragMouseDown;
+        }
+      
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+      
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+          elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+      
+        function closeDragElement() {
+          // stop moving when mouse button is released:
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+//-------------------------------------------------------------------------
+      dragElement(document.getElementById("pf_icon"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id )) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id ).onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+//-------------------------------------------------------------------------
+dragElement(document.getElementById("resume_icon"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id )) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id ).onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
       </script>
         
 </html>
